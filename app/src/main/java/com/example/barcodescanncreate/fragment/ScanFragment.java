@@ -1,4 +1,4 @@
-package com.example.barcodescanncreate;
+package com.example.barcodescanncreate.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.barcodescanncreate.R;
+import com.example.barcodescanncreate.data.ScanHistory;
+import com.example.barcodescanncreate.history.HistoryViewModel;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 

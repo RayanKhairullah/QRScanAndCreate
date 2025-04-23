@@ -1,8 +1,12 @@
-package com.example.barcodescanncreate;
+package com.example.barcodescanncreate.history;
 
 import android.content.Context;
 
 import androidx.lifecycle.LiveData;
+
+import com.example.barcodescanncreate.data.AppDatabase;
+import com.example.barcodescanncreate.data.ScanHistory;
+import com.example.barcodescanncreate.data.ScanHistoryDao;
 
 import java.util.List;
 import java.util.concurrent.Executors;

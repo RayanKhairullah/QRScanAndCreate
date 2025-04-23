@@ -14,4 +14,20 @@
         <item name="iconPadding">0dp</item>
         <item name="iconGravity">textStart</item>
     </style>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    </style>
+    <style name="Widget.App.Button.Filled" parent="Widget.MaterialComponents.Button">
+    </style>
+    <style name="Theme.App" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Warna M3 -->
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+        <!-- Terapkan shape besar pada komponen -->
+        <item name="shapeAppearanceCornerLarge">@style/ShapeAppearance.App.Corner.Large</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Corner.Large" parent="ShapeAppearance.Material3.Corner.Large">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
 </resources>

@@ -2,26 +2,30 @@ package com.example.barcodescanncreate;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.widget.ImageView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
-import com.example.barcodescanncreate.fragment.GenerateFragment;
-import com.example.barcodescanncreate.fragment.HistoryFragment;
-import com.example.barcodescanncreate.fragment.ScanFragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.barcodescanncreate.R;
 
-public class MainActivity extends AppCompatActivity {
+@SuppressLint("CustomSplashScreen")
+public class SplashActivity extends AppCompatActivity {
 
-    @SuppressLint("NonConstantResourceId")
+    private static final long SPLASH_DURATION = 2000; // 2 detik
+
     @Override
-    protected void onCreate(Bundle s) {
-        super.onCreate(s);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         // Terapkan fullscreen layout
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -37,28 +41,21 @@ public class MainActivity extends AppCompatActivity {
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
 
-        BottomNavigationView nav = findViewById(R.id.bottom_nav);
-        nav.setOnItemSelectedListener(item -> {
-            Fragment f;
-            int id = item.getItemId();
-            if (id == R.id.menu_scan) {
-                f = new ScanFragment();
-            } else if (id == R.id.menu_generate) {
-                f = new GenerateFragment();
-            } else {
-                f = new HistoryFragment();
-            }
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, f)
-                    .commit();
-            return true;
-        });
+        ImageView ivLogo = findViewById(R.id.ivLogoSplash);
 
-        // Tampilkan fragment scan secara default
-        nav.setSelectedItemId(R.id.menu_scan);
+        // Animasi fade in
+        Animation fadeIn = new AlphaAnimation(0, 1);
+        fadeIn.setDuration(1000); // 1 detik
+        fadeIn.setFillAfter(true);
+        ivLogo.startAnimation(fadeIn);
+
+        // Handler untuk pindah ke MainActivity setelah delay
+        new Handler().postDelayed(() -> {
+            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            finish();
+        }, SPLASH_DURATION);
     }
 
     public static void setWindowFlag(Activity activity, int bits, boolean on) {

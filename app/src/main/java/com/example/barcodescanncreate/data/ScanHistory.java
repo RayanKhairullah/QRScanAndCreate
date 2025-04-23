@@ -1,4 +1,4 @@
-package com.example.barcodescanncreate;
+package com.example.barcodescanncreate.data;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

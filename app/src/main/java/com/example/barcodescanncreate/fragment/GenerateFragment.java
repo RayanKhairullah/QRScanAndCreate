@@ -1,4 +1,4 @@
-package com.example.barcodescanncreate;
+package com.example.barcodescanncreate.fragment;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -13,17 +13,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.barcodescanncreate.R;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
-import android.os.Environment;
 import android.widget.Toast;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 public class GenerateFragment extends Fragment {
     private Bitmap qrBitmap;

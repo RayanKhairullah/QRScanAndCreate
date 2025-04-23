@@ -1,4 +1,4 @@
-package com.example.barcodescanncreate;
+package com.example.barcodescanncreate.adapter;
 
 import android.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -11,6 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.barcodescanncreate.history.HistoryViewModel;
+import com.example.barcodescanncreate.R;
+import com.example.barcodescanncreate.data.ScanHistory;
 
 import java.text.DateFormat;
 import java.util.Date;

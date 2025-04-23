@@ -1,4 +1,4 @@
-package com.example.barcodescanncreate;
+package com.example.barcodescanncreate.data;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,7 +7,6 @@ import androidx.room.Insert;
 import androidx.room.Query;
 
 import java.util.List;
-import java.util.concurrent.Executors;
 
 @Dao
 public interface ScanHistoryDao {

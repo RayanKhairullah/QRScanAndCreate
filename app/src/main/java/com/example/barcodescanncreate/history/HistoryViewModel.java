@@ -1,9 +1,11 @@
-package com.example.barcodescanncreate;
+package com.example.barcodescanncreate.history;
 
 import android.app.Application;
 
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+
+import com.example.barcodescanncreate.data.ScanHistory;
 
 import java.util.List;
 

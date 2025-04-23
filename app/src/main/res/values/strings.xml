@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ScanAndCreate</string>
+    <string name="btn_generate">Generate QR Code</string>
+    <string name="desc_qr_preview">Preview QR Code</string>
+    <string name="btn_download">Unduh</string>
+    <string name="btn_scan">Scan QR/Barcode</string>
+    <string name="btn_copy">Salin</string>
+    <string name="history_empty">Belum ada riwayat</string>
+    <string name="delete_history">Delete History</string>
+    <string name="title_scan">Scan</string>
+    <string name="desc_scan">Buka fitur pemindaian QR</string>
+    <string name="title_generate">Generate</string>
+    <string name="desc_generate">Buka fitur Generate QR</string>
+    <string name="title_history">History</string>
+    <string name="desc_history">Buka fitur History Scan QR</string>
 </resources>
